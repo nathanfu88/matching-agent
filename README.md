@@ -44,3 +44,21 @@ In a production scenario, we can use an MCP server to interact with an email ser
 
 ### LLM Selection
 Throughout this project, different kinds of models were tested to evaluate the state of performance of those models. The main focus were local offline models (`llama3.x`) and small foundation models (`gpt4.1-nano`). By leveraging multi-agent systems with defined roles, one should be able to accomplish relatively complicated tasks. This project was a test to see what the thresholds of "good enough" such that the multi-agent system wouldn't break down due to unexpected behavior.
+
+## Running the Code
+This project uses [`uv`](https://docs.astral.sh/uv/) for Python project management. To work with this project, [install `uv`](https://docs.astral.sh/uv/#installation) first.
+
+Then, set up your environment:
+```bash
+uv sync
+```
+
+After dependencies have installed, you can use any of the `adk` commands to start the agent chat:
+```bash
+uv run adk web
+```
+
+Or, from project root:
+```bash
+uv run adk run coordination_agent
+```
